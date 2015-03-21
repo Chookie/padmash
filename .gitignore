@@ -1,7 +1,7 @@
 .idea/**/*.*
 !.idea/runConfigurations/*.xml
 node_modules/**
-public/app/*.html
-public/cs/*.css
+public/app/**/*.html
+public/css/*.css
 public/vendor/**
 server/**/*.html
