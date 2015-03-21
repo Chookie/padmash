@@ -1,0 +1,5 @@
+.panel.panel-primary
+    .panel-heading.text.center Favourite Stories
+    .panel-body
+        .row(ng-repeat="story in stories | filter: {favourite:true}")
+            .col-lg-12 {{ story.name }}
