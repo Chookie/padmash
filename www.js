@@ -16,4 +16,4 @@ debug.log("Configuring Errorhandler...");
 require('./server/config/errorhandler')(app,config);
 
 debug.log("Configuring and starting Server...");
-require('./server/config/server')(app);
+require('./server/config/server')(app, config);

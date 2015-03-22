@@ -1,5 +1,10 @@
 .panel.panel-primary
     .panel-heading.text.center Favourite Stories
     .panel-body
-        .row(ng-repeat="story in stories | filter: {favourite:true}")
-            .col-lg-12 {{ story.name }}
+        .row(ng-repeat="story in stories | filter: {favourite:true} | orderBy:'-stars' | limitTo: 10")
+            .col-lg-2
+                .small.span.glyphicon.glyphicon-star(ng-repeat='i in getNumber(story.stars) track by $index')
+            .col-lg-6
+                a(href="#") {{ story.name }}
+            .col-lg-3
+                a(href="#") {{ story.author }}

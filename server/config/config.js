@@ -29,13 +29,15 @@
     var environments = {
         development: {
             appName: 'padmash',
+            appDisplay: 'PadMash',
             environment: env,
             db: process.env.MONGODB_URL || 'mongodb://localhost:27017/multivision',
             rootPath: rootPath,
-            port: normalizePort(3000)
+            port: normalizePort(2000)
         },
         production: {
             appName: 'padmash',
+            appDisplay: 'PadMash',
             environment: env,
             db: process.env.MONGODB_URL || 'mongodb://localhost:27017/multivision',
             rootPath: rootPath,
