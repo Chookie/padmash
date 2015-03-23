@@ -1,6 +1,7 @@
 angular.module('app')
         .controller('mvMainCtrl', ['$scope',
         function ($scope) {
+            $scope.totalStars = 5;
             $scope.stories = [
                 {name: 'C# for Sociopaths', favourite: true, published: new Date('10/5/2013'), author: 'Alison Johnston', stars:5},
                 {name: 'C# for Non-Sociopaths', favourite: true, published: new Date('10/12/2013'), author: 'Zoe Hale', stars:5},
@@ -16,10 +17,14 @@ angular.module('app')
                 {name: "Writing Code that Doesn't Suck", favourite: true, published: new Date('10/13/2013'), author: 'Alex Hale', stars:5},
                 {name: 'Code Reviews for Jerks', favourite: false, published: new Date('10/1/2013'), author: 'Liz the Amazing', stars:3},
                 {name: 'How to Deal with Narcissistic Coworkers', favourite: true, published: new Date('2/15/2013'), author: 'Zoe Hale', stars:5},
-                {name: 'Death March Coding for Fun and Profit', favourite: true, published: new Date('7/1/2013'), author: 'Alex Hale', stars:5}
+                {name: 'Death Match Coding for Fun and Profit', favourite: true, published: new Date('7/1/2013'), author: 'Alex Hale', stars:5}
             ];
             $scope.getNumber = function(num) {
                 return new Array(num);
+            };
+            $scope.getRemainder = function(total,subtract) {
+                var count = total - subtract;
+                return new Array(count);
             }
         }
     ]);
